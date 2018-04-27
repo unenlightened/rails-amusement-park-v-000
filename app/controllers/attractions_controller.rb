@@ -15,7 +15,7 @@ class AttractionsController < ApplicationController
   def create
     @attraction = Attraction.create(attraction_params)
     if @attraction.valid?
-      redirect_to @attraction
+      redirect_to attractions
     end
   end
 
