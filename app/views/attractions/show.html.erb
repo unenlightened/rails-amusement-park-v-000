@@ -10,7 +10,7 @@
     <% if current_user.admin %>
       <%= link_to "Edit Attraction", edit_attraction_path %>
     <% else %>
-      <%= button_to 'Go on this ride', rides_new_path, class: 'btn btn-primary' %>
+      <%= button_to 'Go on this ride', rides_attraction_path, class: 'btn btn-primary' %>
     <% end %>
 
       <!-- <a href="/attractions/1/edit">Edit Attraction</a><p></p> -->
