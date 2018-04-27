@@ -26,7 +26,7 @@ class AttractionsController < ApplicationController
   def update
     @attraction = Attraction.find(params[:id])
     @attraction.update(attraction_params)
-    redirect @attraction if @attraction.valid?
+    redirect_to @attraction if @attraction.valid?
   end
 
 #can put this in a ride controller as ride create ....
