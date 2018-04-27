@@ -25,7 +25,7 @@ class AttractionsController < ApplicationController
 
   def update
     @attraction = Attraction.find(params[:id])
-    @attraction.update(params_attraction)
+    @attraction.update(attraction_params)
     redirect @attraction if @attraction.valid?
   end
 
