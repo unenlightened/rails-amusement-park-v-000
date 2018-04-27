@@ -17,8 +17,12 @@
     <% @attractions.each do |a| %>
       <tr>
         <td><%= a.name %></td>
-        <td><%= a.tickets %></td>
-          <td><%= link_to "Go on " + a.name, a %></td>
+        <td><%= a.tickets %></td
+          <% if current_user.admin %>
+            <td><%= link_to "Show " + a.name, a %></td>
+          <% else %>
+            <td><%= link_to "Go on " + a.name, a %></td>
+          <% end %>
       </tr>
     <% end %>
   </tbody>
