@@ -21,7 +21,10 @@
           <td><%= link_to "Go on " + a.name, a %></td>
       </tr>
     <% end %>
-
   </tbody>
 </table>
 <br>
+
+<% if current_user.admin %>
+  
+<% end %>
