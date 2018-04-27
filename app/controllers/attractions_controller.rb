@@ -14,6 +14,12 @@ class AttractionsController < ApplicationController
 
   def create
     @attraction = Attraction.create(attraction_params)
+    if @attraction.valid?
+      session[:user_id] = @user.id
+      redirect_to @user
+    else
+      render :new
+    end
   end
 
 #can put this in a ride controller as ride create ....
