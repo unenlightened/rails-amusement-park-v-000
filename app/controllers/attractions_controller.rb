@@ -23,6 +23,11 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.find(params[:id])
   end
 
+  def update
+    @attraction = Attraction.find(params[:id])
+    @attraction.update(params_attraction)
+  end
+
 #can put this in a ride controller as ride create ....
   def ride
     ride = Ride.create(user_id: current_user.id, attraction_id: params[:id])
