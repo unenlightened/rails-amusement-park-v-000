@@ -1,19 +1,19 @@
-<%= form_for Attraction.new do |f| %>
+<%= form_for @attraction do |f| %>
   <div class="form-group">
     <%= f.label :name %> <br>
     <%= f.text_field :name, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :height %><br>
-    <%= f.text_field :height, class: 'form-control' %>
+    <%= f.label :min_height %><br>
+    <%= f.text_field :min_height, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :happiness %><br>
-    <%= f.text_field :happiness, class: 'form-control' %>
+    <%= f.label :happiness_rating %><br>
+    <%= f.text_field :happiness_rating, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :nausea %><br>
-    <%= f.text_field :nausea, class: 'form-control' %>
+    <%= f.label :nausea_rating %><br>
+    <%= f.text_field :nausea_rating, class: 'form-control' %>
   </div>
   <div class="form-group">
     <%= f.label :tickets %><br>
@@ -29,3 +29,9 @@
   </div>
   <%= f.submit class: 'btn btn-primary'%>
 <% end %>
+
+ill_in("attraction[name]", :with => "Haunted Mansion")
+fill_in("attraction[min_height]", :with => "32")
+fill_in("attraction[happiness_rating]", :with => "2")
+fill_in("attraction[nausea_rating]", :with => "1")
+fill_in("attraction[tickets]", :with => "4")
