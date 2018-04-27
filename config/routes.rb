@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'sessions#new'
   get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
   resources :attractions, only: [:index, :new, :create, :show]
 
   post '/attractions/:id/ride' => 'attractions#ride', as: 'ride_attraction'
+
 end
