@@ -16,8 +16,6 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.create(attraction_params)
     if @attraction.valid?
       redirect_to @attraction
-    else
-      render :new
     end
   end
 
