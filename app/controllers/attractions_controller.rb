@@ -20,7 +20,9 @@ class AttractionsController < ApplicationController
   end
 
   def edit
-
+    @attraction = Attraction.find(params[:id])
+    @attraction.update(attraction_params)
+    
   end
 
 #can put this in a ride controller as ride create ....
