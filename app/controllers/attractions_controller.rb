@@ -15,8 +15,7 @@ class AttractionsController < ApplicationController
   def create
     @attraction = Attraction.create(attraction_params)
     if @attraction.valid?
-      session[:user_id] = @user.id
-      redirect_to @user
+      redirect_to @attraction
     else
       render :new
     end
