@@ -22,4 +22,10 @@ class AttractionsController < ApplicationController
     ride_message = ride.take_ride
     redirect_to ride.user, alert: ride_message
   end
+
+  private
+
+  def attraction_params
+    params.require(:attraction).permit(:name, :min_height, :happiness_rating, :nausea_rating, :tickets)
+  end
 end
