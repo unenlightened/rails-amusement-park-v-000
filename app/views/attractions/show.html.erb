@@ -8,7 +8,7 @@
     <p><strong>Nausea Rating:</strong> <%= @attraction.nausea_rating %></p>
     <p><strong>Happiness Rating:</strong> <%= @attraction.happiness_rating %></p>
     <% if current_user.admin %>
-      <a href="@attraction#edit">Edit Attraction</a>
+      <a href=edit_attraction_path>Edit Attraction</a>
     <% else %>
       <%= button_to 'Go on this ride', ride_attraction_path, class: 'btn btn-primary' %>
     <% end %>
